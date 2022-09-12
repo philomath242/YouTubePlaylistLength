@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')  }}">
+    <title>YouTube Playlist Length</title>
+</head>
+
+<body>
+    <h1><span>YouTube </span> Playlist Length</h1>
+    <div class="main">
+
+
+
+        <form action="/" method="POST">
+            <label>Enter playlist link here</label>
+            <input type="text" name="link">
+            <br>
+
+            <input type="submit" value="&#8594;">
+        </form>
+
+        <br><br><br>
+
+        <div class="result-section">
+            {% if url != '' %}
+
+            <p class="link-header">
+                The length of the playlist <a href={{url}}> {{url}} </a> is
+            </p>
+
+
+
+            {% endif %}
+
+            {% if result != '' %}
+
+            <p class="result-header">
+                <span> {{ result }} </span>
+            </p>
+
+
+
+            {% endif %}
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
